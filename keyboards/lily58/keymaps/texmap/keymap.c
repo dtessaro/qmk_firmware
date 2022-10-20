@@ -61,24 +61,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Layer selector
  * ,-----------------------------------------.             
- * | ESC  | CANC | <--  |Altium|      |      |          
+ * |Layer#| ESC  | <--  |Altium|      |      |          
  * |------+------+------+------+------+------|              
- * |NumPAD| TAB  |      |      |      |      |      
+ * |  TAB |      |      |      |      |      |      
  * |------+------+------+------+------+------|        
- * |Altium| SHIFT| L BT |minecr| BFME |      |-------.  
+ * | SHIFT| L BT |NUMPAD|      |      |      |-------.  
  * |------+------+------+------+------+------|       |   
- * |Layer#| CTRL | ALT  |      |      |      |-------| 
+ * | CTRL | ALT  |MineCR| BFME |      |      |-------| 
  * `-----------------------------------------/       /   
- *                   | Cut  | Copy | Paste| /Enter  /     
+ *                   | Cut  | Copy | Paste| /       /     
  *                   `----------------------------'      
  */
 
 [_DEFAULT] = LAYOUT( \
-TO(_DEFAULT),	KC_ESC,		  KC_DEL,		  TO(_ALTIUMsch), XXXXXXX,    	XXXXXXX,                    	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  XXXXXXX,		KC_TAB,		  XXXXXXX,    XXXXXXX,      	XXXXXXX,	  	XXXXXXX,                    	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  XXXXXXX,		KC_LSFT,		KC_BTN1,		TO(_MINECRAFT), TO(_BFME),    XXXXXXX,               	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  XXXXXXX,		KC_LCTL,		KC_LOPT,		XXXXXXX,  	  	XXXXXXX,			XXXXXXX,      XXXXXXX,       	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-                							        LCTL(KC_X),		  LCTL(KC_C),   LCTL(KC_V),   KC_ENT,	              	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
+TO(_DEFAULT),	KC_ESC,		  XXXXXXX,		        TO(_ALTIUMsch), XXXXXXX,    	XXXXXXX,                    	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  KC_TAB,		  KC_DEL,		  XXXXXXX,            XXXXXXX,      	XXXXXXX,	  	XXXXXXX,                    	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  KC_LSFT,		KC_BTN1,		TO(_NUMPAD),		        XXXXXXX,        XXXXXXX,      XXXXXXX,               	       XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  KC_LCTL,		KC_LOPT,		TO(_MINECRAFT),		  TO(_BFME),  	  XXXXXXX,			XXXXXXX,      XXXXXXX,       	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+                							        LCTL(KC_X),		  LCTL(KC_C),   LCTL(KC_V),   XXXXXXX,	              	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
 ),
 
 
@@ -131,10 +131,10 @@ TO(_DEFAULT),	KC_ESC,		  KC_DEL,		  TO(_ALTIUMsch), XXXXXXX,    	XXXXXXX,       
  *                   `----------------------------'    
  */
 [_ALTIUMpcb] = LAYOUT( \
-  _______,			  _______,		_______,		M_TGM,			M_TGEA,			M_TGH,						XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,			  _______,		_______,		M_DRC,			KC_L,			M_MOVE,						XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  TO(_ALTIUMsch),	_______,		_______,		XXXXXXX,		XXXXXXX,		XXXXXXX,					XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,			  _______,		_______,		XXXXXXX,		XXXXXXX,		LCTL(KC_W) ,  XXXXXXX,		XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,	_______,		_______,		M_TGM,			M_TGEA,			M_TGH,						XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,	_______,		_______,		M_DRC,			KC_L,			M_MOVE,						XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,	_______,		_______,		XXXXXXX,		XXXXXXX,		XXXXXXX,					XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,	_______,		_______,		XXXXXXX,		XXXXXXX,		LCTL(KC_W) ,  XXXXXXX,		XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
                             					_______,	_______,	_______,	_______,					XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
 ),
 
@@ -152,23 +152,23 @@ TO(_DEFAULT),	KC_ESC,		  KC_DEL,		  TO(_ALTIUMsch), XXXXXXX,    	XXXXXXX,       
 
 /* Minecraft
  * ,-----------------------------------------.             
- * |      |      |      |   1  |  2   |  3   |                
+ * |      |      |   1  |   2  |  3   |      |                
  * |------+------+------+------+------+------|                  
- * |      |      |      |   Q  |  W   |  E   |                 
+ * |      |      |   Q  |   W  |  E   |      |                 
  * |------+------+------+------+------+------|                  
- * |      |      |      |   A  |  S   |  D   |-------.  
+ * |      |      |   A  |   S  |  D   |      |-------.  
  * |------+------+------+------+------+------| lock  |  
- * |      |      |      |   Z  |  X   |  C   |-------|   
+ * |      |      |   Z  |   X  |  C   |      |-------|   
  * `-----------------------------------------/       /  
  *                   |      |      |        / SPACE /  
  *                   `----------------------------'    
  */
  [_MINECRAFT] = LAYOUT( \
-  _______,			_______,		_______,		  KC_1,    		KC_2,    	  KC_3,	                      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,			_______,		_______,		  KC_Q,		    KC_W,		    KC_E,                     	XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,			_______,    _______,		  KC_A,    		KC_S,    	  KC_D,                     	XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,	    _______,		_______,      KC_Z,			  KC_X,       KC_C,		  KC_LOCK,      		XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-                                  				_______,     	_______,		_______,    KC_SPC ,  		XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
+  _______,			_______,		KC_1,    		KC_2,       KC_3,	  _______,                          XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,			_______,		KC_Q,		    KC_W,       KC_E,   _______,                          XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,			_______,    KC_A,    		KC_S,       KC_D,   _______,                         	XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,	    _______,		KC_Z,			  KC_X,       KC_C,		_______, KC_LOCK,                 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+                                  				_______,     	_______,    _______,    KC_SPC ,  		XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
 ),
 
 
