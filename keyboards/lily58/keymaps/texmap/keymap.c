@@ -16,10 +16,10 @@ enum layer_number {
 enum custom_keycodes {
     M_TGH = SAFE_RANGE,
     M_TGEA,
-	M_TGM,
+ M_TGM,
     M_MOVE,
     M_DRC,
-	M_MinDiv
+ M_MinDiv
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -38,11 +38,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                   `----------------------------'    
  
  [_NAME] = LAYOUT( \
-  _______,			_______,		_______,		  _______,    		_______,    	  _______,	                      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,			_______,		_______,		  _______,		    _______,		    _______,                     	XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,			_______,    _______,		  _______,    		_______,    	  _______,                     	XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,	    _______,		_______,      _______,			  _______,       _______,		  _______,      		XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-                                  				_______,     	_______,		_______,    _______ ,  		XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
+  _______,   _______,  _______,    _______,     _______,      _______,                      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,   _______,  _______,    _______,     _______,      _______,                      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,   _______,  _______,    _______,     _______,      _______,                      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,   _______,  _______,    _______,     _______,      _______,    _______,          XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+                                      _______,      _______,  _______,    _______ ,         XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
 ),
 */
 
@@ -74,11 +74,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 
 [_DEFAULT] = LAYOUT( \
-TO(_DEFAULT),	KC_ESC,		  XXXXXXX,		        TO(_ALTIUMsch), XXXXXXX,    	XXXXXXX,                    	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  KC_TAB,		  KC_DEL,		  XXXXXXX,            XXXXXXX,      	XXXXXXX,	  	XXXXXXX,                    	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  KC_LSFT,		KC_BTN1,		TO(_NUMPAD),		        XXXXXXX,        XXXXXXX,      XXXXXXX,               	       XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  KC_LCTL,		KC_LOPT,		TO(_MINECRAFT),		  TO(_BFME),  	  XXXXXXX,			XXXXXXX,      XXXXXXX,       	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-                							        LCTL(KC_X),		  LCTL(KC_C),   LCTL(KC_V),   XXXXXXX,	              	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
+  TO(_DEFAULT), KC_ESC,    XXXXXXX,           TO(_ALTIUMsch),   XXXXXXX,     XXXXXXX,                      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  KC_TAB,       KC_DEL,    XXXXXXX,           XXXXXXX,          XXXXXXX,     XXXXXXX,                      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  KC_LSFT,      KC_BTN1,   TO(_NUMPAD),       XXXXXXX,          XXXXXXX,     XXXXXXX,                       XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  KC_LCTL,      KC_LOPT,   TO(_MINECRAFT),    TO(_BFME),        XXXXXXX,     XXXXXXX,     XXXXXXX,         XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+                               LCTL(KC_X),    LCTL(KC_C),   LCTL(KC_V),   XXXXXXX,                         XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
 ),
 
 
@@ -110,11 +110,11 @@ TO(_DEFAULT),	KC_ESC,		  XXXXXXX,		        TO(_ALTIUMsch), XXXXXXX,    	XXXXXXX,
  *                   `----------------------------'    
  */
 [_ALTIUMsch] = LAYOUT( \
-  _______,			  _______,		_______,		XXXXXXX,			M_TGEA,			M_TGH,						XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,			  _______,		_______,		M_DRC,			KC_L,			M_MOVE,						XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  TO(_ALTIUMpcb),	_______,		_______,		XXXXXXX,		XXXXXXX,		XXXXXXX,					XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,			  _______,		_______,		XXXXXXX,		XXXXXXX,		LCTL(KC_W) ,  XXXXXXX,		XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-                            					_______,	_______,	_______,	_______,					XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
+  _______,     _______,  _______,  XXXXXXX,   M_TGEA,   M_TGH,      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,     _______,  _______,  M_DRC,   KC_L,   M_MOVE,      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  TO(_ALTIUMpcb), _______,  _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,     XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,     _______,  _______,  XXXXXXX,  XXXXXXX,  LCTL(KC_W) ,  XXXXXXX,  XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+                                 _______, _______, _______, _______,     XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
 ),
 
 /* ALTIUM PCB
@@ -131,11 +131,11 @@ TO(_DEFAULT),	KC_ESC,		  XXXXXXX,		        TO(_ALTIUMsch), XXXXXXX,    	XXXXXXX,
  *                   `----------------------------'    
  */
 [_ALTIUMpcb] = LAYOUT( \
-  _______,	_______,		_______,		M_TGM,			M_TGEA,			M_TGH,						XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,	_______,		_______,		M_DRC,			KC_L,			M_MOVE,						XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,	_______,		_______,		XXXXXXX,		XXXXXXX,		XXXXXXX,					XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,	_______,		_______,		XXXXXXX,		XXXXXXX,		LCTL(KC_W) ,  XXXXXXX,		XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-                            					_______,	_______,	_______,	_______,					XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
+  _______, _______,  _______,  M_TGM,   M_TGEA,   M_TGH,      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______, _______,  _______,  M_DRC,   KC_L,   M_MOVE,      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______, _______,  _______,  XXXXXXX,  XXXXXXX,  XXXXXXX,     XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______, _______,  _______,  XXXXXXX,  XXXXXXX,  LCTL(KC_W) ,  XXXXXXX,  XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+                                 _______, _______, _______, _______,     XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
 ),
 
 
@@ -164,11 +164,11 @@ TO(_DEFAULT),	KC_ESC,		  XXXXXXX,		        TO(_ALTIUMsch), XXXXXXX,    	XXXXXXX,
  *                   `----------------------------'    
  */
  [_MINECRAFT] = LAYOUT( \
-  _______,			_______,		KC_1,    		KC_2,       KC_3,	  _______,                          XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,			_______,		KC_Q,		    KC_W,       KC_E,   _______,                          XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,			_______,    KC_A,    		KC_S,       KC_D,   _______,                         	XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,	    _______,		KC_Z,			  KC_X,       KC_C,		_______, KC_LOCK,                 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-                                  				_______,     	_______,    _______,    KC_SPC ,  		XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
+  _______,   _______,  KC_1,      KC_2,       KC_3,   _______,                          XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,   _______,  KC_Q,      KC_W,       KC_E,   _______,                          XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,   _______,    KC_A,      KC_S,       KC_D,   _______,                          XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,     _______,  KC_Z,     KC_X,       KC_C,  _______, KC_LOCK,                 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+                                      _______,      _______,    _______,    KC_SPC ,    XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
 ),
 
 
@@ -197,11 +197,11 @@ TO(_DEFAULT),	KC_ESC,		  XXXXXXX,		        TO(_ALTIUMsch), XXXXXXX,    	XXXXXXX,
  *                   `----------------------------'    
  */
  [_BFME] = LAYOUT( \
-  _______,			_______,		_______,		  _______,    		_______,    	  _______,	                      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,			_______,		_______,		  KC_Q,    		    KC_UP,    	    _______,                     	XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,			_______,    _______,		  KC_LEFT,			  KC_DOWN,       KC_RGHT,                        	XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,	    _______,		_______,      _______,	    _______,		_______,		  KC_H,      		XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-                                  				_______,     	_______,		_______,    _______ ,  		          XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
+  _______,   _______,  _______,    _______,      _______,       _______,                       XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,   _______,  _______,    KC_Q,          KC_UP,         _______,                      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,   _______,    _______,    KC_LEFT,     KC_DOWN,       KC_RGHT,                         XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,     _______,  _______,      _______,     _______,  _______,    KC_H,        XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+                                      _______,      _______,  _______,    _______ ,              XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
 ),
 
 
@@ -231,11 +231,11 @@ TO(_DEFAULT),	KC_ESC,		  XXXXXXX,		        TO(_ALTIUMsch), XXXXXXX,    	XXXXXXX,
  *                   `----------------------------'     
  */
 [_NUMPAD] = LAYOUT( \
-  _______,		_______,		_______,		KC_P7,	  		KC_P8,  		KC_P9,                    	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,		_______,		_______,    KC_P4,    		KC_P5,			KC_P6,                    	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,		_______,		_______,		KC_P1,    		KC_P2,			KC_P3,                     	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-  _______,		_______,		_______,		KC_PMNS,  		KC_P0,			KC_RBRC,   KC_COMM,       	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
-                							KC_NLCK,   		KC_LBRC,     KC_RBRC ,		KC_ENT ,	      	 XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
+  _______,  _______,  _______,  KC_P7,     KC_P8,    KC_P9,                      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,  _______,  _______,    KC_P4,      KC_P5,   KC_P6,                      XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,  _______,  _______,  KC_P1,      KC_P2,   KC_P3,                       XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+  _______,  _______,  _______,  KC_PMNS,    KC_P0,   KC_RBRC,   KC_COMM,         XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX,  \
+                       KC_NLCK,     KC_LBRC,     KC_RBRC ,  KC_ENT ,         XXXXXXX,XXXXXXX,XXXXXXX,XXXXXXX \
 )
   
 };
@@ -274,12 +274,12 @@ const char *read_keylogs(void);
 
 
 bool oled_task_user(void) {
-	
-	oled_write_P(PSTR("Layer: "), false);
-	
+ 
+ oled_write_P(PSTR("Layer: "), false);
+ 
 //MAX 21 chars
     switch (get_highest_layer(layer_state)) {
-    	case _DEFAULT:
+     case _DEFAULT:
             oled_write_P(PSTR("\nSELECT LAYER #\n"), false);
             break;
         case _NUMPAD:
@@ -302,8 +302,8 @@ bool oled_task_user(void) {
         default:
             // Or use the write_ln shortcut over adding '\n' to the end of your string
             oled_write_ln_P(PSTR("Undefined"), false);
-    }	
-	
+    } 
+ 
   if (is_keyboard_master()) {
     // If you want to change the display of OLED, you need to change here
     //oled_write_ln(read_layer_state(), false);
@@ -323,43 +323,43 @@ bool oled_task_user(void) {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     
-	switch (keycode) {
-		case M_TGH:
-			if (record->event.pressed)
-				SEND_STRING("t" SS_DELAY(100) "g" SS_DELAY(100) "h");
-		    break;
-		case M_TGEA:
+ switch (keycode) {
+  case M_TGH:
+   if (record->event.pressed)
+    SEND_STRING("t" SS_DELAY(100) "g" SS_DELAY(100) "h");
+      break;
+  case M_TGEA:
       if (record->event.pressed){
-			  if(keyboard_report->mods & MOD_BIT (KC_LSFT))
-				  SEND_STRING("t" SS_DELAY(100) "g" SS_DELAY(100) "e" SS_DELAY(1000) "t" SS_DELAY(100) "g" SS_DELAY(100) "a");
-		    else
-        	SEND_STRING("t" SS_DELAY(100) "g" SS_DELAY(100) "a");
+     if(keyboard_report->mods & MOD_BIT (KC_LSFT))
+      SEND_STRING("t" SS_DELAY(100) "g" SS_DELAY(100) "e" SS_DELAY(1000) "t" SS_DELAY(100) "g" SS_DELAY(100) "a");
+      else
+         SEND_STRING("t" SS_DELAY(100) "g" SS_DELAY(100) "a");
       }
       break;
 
-		case M_TGM:
-			if (record->event.pressed)
-				SEND_STRING("t" SS_DELAY(100) "g" SS_DELAY(100) "m");
-		    break;
-		case M_MOVE: // Altium
-			if (record->event.pressed)
-				SEND_STRING("e" SS_DELAY(100) "m" SS_DELAY(100) "m");
-		    break;
-		case M_DRC:
-			if (record->event.pressed)
-				SEND_STRING("d" SS_DELAY(100) "r" SS_DELAY(100) "c");
-		    break;
-		case M_MinDiv:
-			if (record->event.pressed){}
-				
+  case M_TGM:
+   if (record->event.pressed)
+    SEND_STRING("t" SS_DELAY(100) "g" SS_DELAY(100) "m");
+      break;
+  case M_MOVE: // Altium
+   if (record->event.pressed)
+    SEND_STRING("e" SS_DELAY(100) "m" SS_DELAY(100) "m");
+      break;
+  case M_DRC:
+   if (record->event.pressed)
+    SEND_STRING("d" SS_DELAY(100) "r" SS_DELAY(100) "c");
+      break;
+  case M_MinDiv:
+   if (record->event.pressed){}
+    
 
-		//SEND_STRING(SS_TAP(X_LGUI) SS_DELAY(50) "google chrome" SS_DELAY(50) SS_TAP(X_ENTER) SS_DELAY(500) "minecraft.fandom.com/wiki/Minecraft_Wiki" SS_TAP(X_ENTER)); 
-	}  
+  //SEND_STRING(SS_TAP(X_LGUI) SS_DELAY(50) "google chrome" SS_DELAY(50) SS_TAP(X_ENTER) SS_DELAY(500) "minecraft.fandom.com/wiki/Minecraft_Wiki" SS_TAP(X_ENTER)); 
+ }  
   
   if (record->event.pressed) {
-	#ifdef OLED_ENABLE
-    	set_keylog(keycode, record);
-	#endif
+ #ifdef OLED_ENABLE
+     set_keylog(keycode, record);
+ #endif
     // set_timelog();
   }
   
@@ -373,11 +373,11 @@ void keyboard_pre_init_user(void) {
 }
 
 /* MACRO DEFINITION
-	case M_TGH:	
-	    if (record->event.pressed) { // when keycode QMKBEST is pressed
-	        SEND_STRING(TGH);
-	    } 
-		else {}// when keycode QMKBEST is released
-	    break;
+ case M_TGH: 
+     if (record->event.pressed) { // when keycode QMKBEST is pressed
+         SEND_STRING(TGH);
+     } 
+  else {}// when keycode QMKBEST is released
+     break;
 
 */
