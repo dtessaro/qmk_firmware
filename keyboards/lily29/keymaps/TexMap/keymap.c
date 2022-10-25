@@ -123,9 +123,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------.             
  * |      |      |      |      |      |      |                
  * |------+------+------+------+------+------|                  
- * |      |      |      |      |      |      |                 
+ * |      |      |  Q   |  W   |      |      |                 
  * |------+------+------+------+------+------|                  
- * |      |      |  A   |      |  G   |      |-------.  
+ * |      |      |  A   |      |      |      |-------.  
  * |------+------+------+------+------+------|       |  
  * |      |      |   Z  |  C   |  V   |      |-------|   
  * `-----------------------------------------/ SPACE /  
@@ -134,7 +134,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
  [_PREMIERE] = LAYOUT( \
   _______,          _______,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,                            \
-  _______,          _______,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,                            \
+  _______,          _______,          KC_Q,             KC_W,             XXXXXXX,          XXXXXXX,                            \
   _______,          _______,          KC_A,             XXXXXXX,          KC_G,             XXXXXXX,                            \
   _______,          _______,          KC_Z,             KC_C,             KC_V,             XXXXXXX,          XXXXXXX,          \
                                                         _______,          _______,          _______,          KC_SPC            \
