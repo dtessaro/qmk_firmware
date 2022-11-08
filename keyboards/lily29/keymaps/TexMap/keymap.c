@@ -1,14 +1,16 @@
+//https://patorjk.com/software/taag/#p=display&f=Standard&t=Type%20Something%20
+
 #include QMK_KEYBOARD_H
 
 enum layer_number {
   
-  _DEFAULT = 0,
+  _LAYERS = 0,
   
-  _ALTIUM,
+  _DEFAULT,
   _PREMIERE,
   _MINECRAFT, 
   _BFME, 
-
+  _LIGHT,
   _NUMPAD
 };
 
@@ -58,55 +60,53 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                __/ |              
               |___/               */
               
-
-
 /* ,-----------------------------------------.             
- * |Layer#| ESC  |PrePRO|Altium|      |      |          
+ * |Layer#| ESC  |      |      |      |      |          
  * |------+------+------+------+------+------|              
  * |  TAB | CANC |      |      |      |      |      
  * |------+------+------+------+------+------|        
- * | SHIFT| L BT |NUMPAD|      |      |      |-------.  
+ * | SHIFT| L BT |      |      |      |      |-------.  
  * |------+------+------+------+------+------|       |   
- * | CTRL | ALT  |MineCR| BFME |      |      |-------| 
+ * | CTRL | ALT  |      |      |      |      |-------| 
  * `-----------------------------------------/       /   
  *                   | Cut  | Copy | Paste| /       /     
- *                   `----------------------------'      
+ *                   `----------------------------'     
  */
 
-[_DEFAULT] = LAYOUT( \
-  TO(_DEFAULT),    KC_ESC,      TO(_PREMIERE),       TO(_ALTIUM),   XXXXXXX,        XXXXXXX,                  \
-  KC_TAB,          KC_DEL,      XXXXXXX,           XXXXXXX,          XXXXXXX,        XXXXXXX,                  \
-  KC_LSFT,         KC_BTN1,     TO(_NUMPAD),       XXXXXXX,          XXXXXXX,        XXXXXXX,                  \
-  KC_LCTL,         KC_LOPT,     TO(_MINECRAFT),    TO(_BFME),        XXXXXXX,        XXXXXXX,        XXXXXXX,  \
+[_LAYERS] = LAYOUT( \
+  TO(_LAYERS),     KC_ESC,      TO(_DEFAULT),      XXXXXXX,          XXXXXXX,        TO(_LIGHT),               \
+  KC_TAB,          KC_DEL,      TO(_PREMIERE),     XXXXXXX,          XXXXXXX,        TO(_LIGHT),               \
+  KC_LSFT,         KC_BTN1,     TO(_NUMPAD),       XXXXXXX,          XXXXXXX,        TO(_LIGHT),               \
+  KC_LCTL,         KC_LOPT,     TO(_MINECRAFT),    TO(_BFME),        XXXXXXX,        TO(_LIGHT),     XXXXXXX,  \
                                                    LCTL(KC_X),       LCTL(KC_C),     LCTL(KC_V),     XXXXXXX   \
 ),
 
-/*         _ _   _                 
-     /\   | | | (_)                
-    /  \  | | |_ _ _   _ _ __ ___  
-   / /\ \ | | __| | | | | '_ ` _ \ 
-  / ____ \| | |_| | |_| | | | | | |
- /_/    \_\_|\__|_|\__,_|_| |_| |_|
+/*
+  ____        __             _ _   
+ |  _ \  ___ / _| __ _ _   _| | |_ 
+ | | | |/ _ \ |_ / _` | | | | | __|
+ | |_| |  __/  _| (_| | |_| | | |_ 
+ |____/ \___|_|  \__,_|\__,_|_|\__|
 */                                   
  
 /* ,-----------------------------------------.             
- * |      |      | TGM  |TGE[A]| TGH  |      |        
+ * |      |      |  1   |  2   |  3   |  4   |        
  * |------+------+------+------+------+------|          
- * |      |      | DRC  |Layers| Move |      |         
+ * |      |      |  Q   |  W   |  E   |  R   |         
  * |------+------+------+------+------+------|        
- * |      |      |      |      |      |      |-------.  
- * |------+------+------+------+------+------|       |   
- * |      |      |      |      |Ctrl+W|      |-------|  
+ * |      |      |  A   |  S   |  D   |  F   |-------.  
+ * |------+------+------+------+------+------| ENTER |   
+ * |      |      |  Z   |  X   |  C   |  V   |-------|  
  * `-----------------------------------------/       /    
- *                   |      |      |      | /       /  
+ *                   |      |      |      | / SPACE /  
  *                   `----------------------------'    
  */
-[_ALTIUM] = LAYOUT( \
-  _______,          _______,          XXXXXXX,          M_TGEA,           M_TGH,               _______,                            \
-  _______,          _______,          M_DRC,            KC_L,             M_MOVE,              _______,                            \
-  _______,          _______,          XXXXXXX,          XXXXXXX,          XXXXXXX,             _______,                            \
-  _______,          _______,          XXXXXXX,          XXXXXXX,          LCTL(KC_W),          _______,          XXXXXXX,          \
-                                                        _______,          _______,             _______,          _______           \
+[_DEFAULT] = LAYOUT( \
+  _______,          _______,          KC_1,             KC_2,             KC_3,                KC_4,                               \
+  _______,          _______,          KC_Q,             KC_W,             KC_E,                KC_R,                               \
+  _______,          _______,          KC_A,             KC_S,             KC_D,                KC_F,                               \
+  _______,          _______,          KC_Z,             KC_X,             KC_C,                KC_V,             KC_ENT,           \
+                                                        _______,          _______,             _______,          KC_SPC            \
 ),
 
 
@@ -121,23 +121,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /*
  * ,-----------------------------------------.             
- * |      |      |      |      |      |      |                
+ * |      |      |      |      |      |SFT , |                
  * |------+------+------+------+------+------|                  
  * |      |      |  Q   |  W   |      |      |                 
  * |------+------+------+------+------+------|                  
  * |      |      |  A   |      |      |      |-------.  
- * |------+------+------+------+------+------|       |  
+ * |------+------+------+------+------+------| space |  
  * |      |      |   Z  |  C   |  V   |      |-------|   
- * `-----------------------------------------/ SPACE /  
+ * `-----------------------------------------/ Alt   /  
  *                   |      |      |      | /       /  
  *                   `----------------------------'    
  */
  [_PREMIERE] = LAYOUT( \
-  _______,          _______,          XXXXXXX,          XXXXXXX,          XXXXXXX,          XXXXXXX,                            \
+  _______,          _______,          XXXXXXX,          XXXXXXX,          XXXXXXX,          LSFT(KC_COMM),                       \
   _______,          _______,          KC_Q,             KC_W,             XXXXXXX,          XXXXXXX,                            \
   _______,          _______,          KC_A,             XXXXXXX,          KC_G,             XXXXXXX,                            \
-  _______,          _______,          KC_Z,             KC_C,             KC_V,             XXXXXXX,          XXXXXXX,          \
-                                                        _______,          _______,          _______,          KC_SPC            \
+  _______,          _______,          KC_Z,             KC_C,             KC_V,             XXXXXXX,          KC_SPC,           \
+                                                        _______,          _______,          _______,          KC_LOPT           \
 ),
 
 /*
@@ -204,6 +204,35 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                         _______,          _______,          _______,          _______    \
 ),
 
+/*
+  _     _       _     _       
+ | |   (_) __ _| |__ | |_ ___ 
+ | |   | |/ _` | '_ \| __/ __|
+ | |___| | (_| | | | | |_\__ \
+ |_____|_|\__, |_| |_|\__|___/
+          |___/               
+*/
+
+
+/* ,-----------------------------------------.             
+ * |      |      |      |      |      | High |                
+ * |------+------+------+------+------+------|                  
+ * |      |      |      |      |      | Low  |                 
+ * |------+------+------+------+------+------|                  
+ * |      |      |      |      |      | Day  |-------.  
+ * |------+------+------+------+------+------| Cobra |  
+ * |      |      |      |      |      |Night |-------|   
+ * `-----------------------------------------/ LAMP  /  
+ *                   |      |      |      | /       /  
+ *                   `----------------------------'    
+ */
+ [_LIGHT] = LAYOUT( \
+  _______,          _______,          XXXXXXX,          XXXXXXX,          XXXXXXX,          KC_H,                            \
+  _______,          _______,          XXXXXXX,          XXXXXXX,          XXXXXXX,          KC_L,                            \
+  _______,          _______,          XXXXXXX,          XXXXXXX,          XXXXXXX,          KC_D,                            \
+  _______,          _______,          XXXXXXX,          XXXXXXX,          XXXXXXX,          KC_N,             KC_C,          \
+                                                        _______,          _______,          _______,          KC_T           \
+),
 
 
 /*
@@ -279,14 +308,14 @@ bool oled_task_user(void) {
  
 //MAX 21 chars
     switch (get_highest_layer(layer_state)) {
-     case _DEFAULT:
+     case _LAYERS:
             oled_write_P(PSTR("\nSELECT LAYER #\n"), false);
             break;
         case _NUMPAD:
             oled_write_P(PSTR("\nNUMPAD\n"), false);
             break;
-        case _ALTIUM:
-            oled_write_P(PSTR("\nAltium\n"), false);
+        case _DEFAULT:
+            oled_write_P(PSTR("\nDefault\n"), false);
             break;
         case _PREMIERE:
             oled_write_P(PSTR("\nPremierePro\n"), false);
@@ -297,7 +326,9 @@ bool oled_task_user(void) {
         case _BFME:
             oled_write_P(PSTR("\nLord of the Rings\n"), false);
             break;
-
+        case _LIGHT:
+            oled_write_P(PSTR("\nInt.7 Lights\n"), false);
+            break;
         default:
             // Or use the write_ln shortcut over adding '\n' to the end of your string
             oled_write_ln_P(PSTR("Undefined"), false);
